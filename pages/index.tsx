@@ -5,6 +5,8 @@ import { Picture } from "../types/picture";
 import { NextPage } from "next";
 import { useState } from "react";
 import Head from "next/head";
+import { Footer } from "../components/Footer";
+import Script from "next/script";
 
 const Home: NextPage = () => {
   const [picture, setPicture] = useState<Picture>();
@@ -51,16 +53,19 @@ const Home: NextPage = () => {
         <meta property="og:image" content="/cover.png" />
         <meta property="og:description" content={description} />
       </Head>
+      <Script async defer src="https://buttons.github.io/buttons.js" />
       <Sidebar picture={picture} opened={opened} close={close} />
       <h1 className="font-bold text-5xl tracking-tight">Pics</h1>
       <p className="mt-2 text-gray-500">{description}</p>
       <PictureList selected={selected} />
-      {opened ? (
-        <div
-          className={`fixed inset-0  transition-opacity w-full h-full bg-black opacity-20 z-10`}
-          onClick={() => setOpened(false)}
-        ></div>
-      ) : null}
+
+      <div
+        className={`fixed inset-0 ${
+          opened ? "flex" : "hidden"
+        } transition-opacity w-full h-full bg-black opacity-20 z-10`}
+        onClick={() => setOpened(false)}
+      ></div>
+      <Footer />
     </Layout>
   );
 };

@@ -73,4 +73,12 @@ export const PICTURES = [
     camera: "iPhone XR",
     size: "7.00MB",
   },
+  {
+    id: 10,
+    country: "UK",
+    path: "/pics/picture10.jpeg",
+    description: "My Prisma & Next.js stickers.",
+    camera: "iPhone XR",
+    size: "5.24MB",
+  },
 ];
