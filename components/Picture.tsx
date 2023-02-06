@@ -1,5 +1,3 @@
-import { Suspense } from "react";
-
 interface Props {
   description: string;
   path: string;
@@ -7,15 +5,14 @@ interface Props {
 
 export const Picture = ({ description, path }: Props) => {
   return (
-    <Suspense fallback={<p>Loading...</p>}>
-      <picture>
-        <img
-          className="rounded-3xl"
-          height={900}
-          src={path}
-          alt={description}
-        />
-      </picture>
-    </Suspense>
+    <picture>
+      <img
+        loading="lazy"
+        className="rounded-3xl"
+        height={900}
+        src={path}
+        alt={description}
+      />
+    </picture>
   );
 };
