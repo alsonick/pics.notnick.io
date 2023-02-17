@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Props {
   description: string;
   path: string;
@@ -6,11 +8,12 @@ interface Props {
 export const Picture = ({ description, path }: Props) => {
   return (
     <picture>
-      <img
+      <Image
         loading="lazy"
         className="rounded-3xl"
         height={900}
         src={path}
+        priority={true}
         alt={description}
       />
     </picture>
