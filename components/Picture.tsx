@@ -7,15 +7,12 @@ interface Props {
 
 export const Picture = ({ description, path }: Props) => {
   return (
-    <picture>
-      <Image
-        loading="lazy"
-        className="rounded-3xl"
-        height={900}
-        src={path}
-        priority={true}
-        alt={description}
-      />
-    </picture>
+    <Image
+      className="rounded-3xl"
+      height={900}
+      src={path}
+      priority={true}
+      alt={description}
+    />
   );
 };
