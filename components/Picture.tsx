@@ -9,7 +9,8 @@ export const Picture = ({ description, path }: Props) => {
   return (
     <Image
       className="rounded-3xl"
-      height={900}
+      height={1000}
+      width={450}
       src={path}
       priority={true}
       alt={description}
