@@ -1,4 +1,5 @@
 import { Picture as P } from "../types/picture";
+import { stats } from "../lib/stats";
 import { FiX } from "react-icons/fi";
 import { saveAs } from "file-saver";
 import { Picture } from "./Picture";
@@ -11,28 +12,6 @@ interface Props {
 }
 
 export const Sidebar = ({ picture, close, opened }: Props) => {
-  const stats = [
-    {
-      id: 1,
-      key: "Filename",
-      value: picture?.path.slice(6),
-    },
-    {
-      id: 2,
-      key: "Camera",
-      value: picture?.camera,
-    },
-    {
-      id: 3,
-      key: "Size",
-      value: picture?.size,
-    },
-    {
-      id: 4,
-      key: "Country",
-      value: picture?.country,
-    },
-  ];
   return (
     <div
       className={`${
@@ -54,7 +33,7 @@ export const Sidebar = ({ picture, close, opened }: Props) => {
             {picture.description ? picture.description : "No description."}
           </p>
           <div className="flex flex-col border-t pt-3 mb-3">
-            {stats.map((stat) => (
+            {stats(picture).map((stat) => (
               <div className="flex text-gray-500 items-center" key={stat.id}>
                 <p>
                   {stat.key}: {stat.value}
