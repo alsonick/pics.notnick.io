@@ -1,11 +1,11 @@
 import { PictureList } from "../components/PictureList";
 import { Sidebar } from "../components/Sidebar";
+import { Footer } from "../components/Footer";
 import { Layout } from "../components/Layout";
 import { Picture } from "../types/picture";
 import { NextPage } from "next";
 import { useState } from "react";
 import Head from "next/head";
-import { Footer } from "../components/Footer";
 import Script from "next/script";
 
 const Home: NextPage = () => {
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
     });
   }
 
-  const title = "Pics - Nicholas Njoki";
+  const title = "Pics • Nicholas Njoki";
   const description = "A collection of pictures I've taken.";
 
   return (
