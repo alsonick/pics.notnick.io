@@ -3,10 +3,10 @@ import { Sidebar } from "../components/Sidebar";
 import { Footer } from "../components/Footer";
 import { Layout } from "../components/Layout";
 import { Picture } from "../types/picture";
-import { NextPage } from "next";
-import { useState } from "react";
-import Head from "next/head";
 import Script from "next/script";
+import { useState } from "react";
+import { NextPage } from "next";
+import Head from "next/head";
 
 const Home: NextPage = () => {
   const [picture, setPicture] = useState<Picture>();
