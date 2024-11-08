@@ -3,6 +3,7 @@ import { Sidebar } from "../components/Sidebar";
 import { Footer } from "../components/Footer";
 import { Layout } from "../components/Layout";
 import { Picture } from "../types/picture";
+import Slide from "@mui/material/Slide";
 import Script from "next/script";
 import { useState } from "react";
 import { NextPage } from "next";
@@ -18,7 +19,7 @@ const Home: NextPage = () => {
   };
 
   const close = () => {
-    setOpened(false);
+    setOpened((prev) => !prev);
   };
 
   if (typeof window === "object") {
@@ -57,14 +58,8 @@ const Home: NextPage = () => {
       <Sidebar picture={picture} opened={opened} close={close} />
       <h1 className="font-bold text-5xl tracking-tight">Pics</h1>
       <p className="mt-2 text-gray-500">{description}</p>
-      <PictureList selected={selected} />
+      <PictureList selected={selected} close={close} />
 
-      <div
-        className={`fixed inset-0 ${
-          opened ? "flex" : "hidden"
-        } transition-opacity w-full h-full bg-black opacity-20 z-10`}
-        onClick={() => setOpened(false)}
-      ></div>
       <Footer />
     </Layout>
   );

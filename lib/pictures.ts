@@ -125,7 +125,7 @@ export const PICTURES = [
     id: 16,
     country: "Kenya",
     path: "/pics/picture16.jpg",
-    description: "Jomo Kenyatta International Airport",
+    description: "Jomo Kenyatta International Airport.",
     camera: "iPhone 15",
     size: "6.6MB",
   },

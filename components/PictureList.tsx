@@ -4,13 +4,19 @@ import { Card } from "./Card";
 
 interface Props {
   selected: (picture: Picture) => void;
+  close: () => void;
 }
 
-export const PictureList = ({ selected }: Props) => {
+export const PictureList = ({ selected, close }: Props) => {
   return (
     <div className="grid grid-flow-row-col md:grid-cols-3 grid-cols-1 grid-rows-3 gap-8 my-10">
       {PICTURES.map((picture) => (
-        <Card key={picture.id} selected={selected} picture={picture} />
+        <Card
+          key={picture.id}
+          selected={selected}
+          picture={picture}
+          close={close}
+        />
       ))}
     </div>
   );
