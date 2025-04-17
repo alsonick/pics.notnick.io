@@ -38,7 +38,7 @@ const Home: NextPage = () => {
     <Layout>
       <Head>
         <title>{title}</title>
-        <meta name="description" content={description} />
+        <meta name="description" content={description} key="desc" />
         <meta name="theme-color" content="#f54bff" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -48,10 +48,13 @@ const Home: NextPage = () => {
         <meta property="twitter:creator" content="@heynickn" />
         <meta property="twitter:site" content="@nick" />
         <meta property="og:title" content={title} />
+        <meta property="og:site_name" content="pics.notnick.io" />
         <meta property="og:url" content="https://pics.notnick.io/" />
         <meta property="og:type" content="website" />
-        <meta property="twitter:image" content="/cover.png" />
-        <meta property="og:image" content="/cover.png" />
+        <meta property="twitter:image" content="/og.png" />
+        <meta property="og:image" content="/og.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="600" />
         <meta property="og:description" content={description} />
       </Head>
       <Script async defer src="https://buttons.github.io/buttons.js" />

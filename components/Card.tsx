@@ -14,7 +14,7 @@ interface Props {
 export const Card = ({ selected, picture, close }: Props) => {
   return (
     <div>
-      <p className="p-1 text-white bg-[#f54bff] w-fit px-4 rounded-xl mb-2 font-bold">
+      <p className="p-1 text-white bg-[#f54bff] w-fit px-4 text-sm rounded-xl mb-2 font-bold">
         {picture.country}
       </p>
       <Picture description={picture.description} path={picture.path} />

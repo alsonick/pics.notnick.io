@@ -8,7 +8,7 @@ interface Props {
 export const Picture = ({ description, path }: Props) => {
   return (
     <Image
-      className="rounded-3xl"
+      className="rounded"
       alt={description}
       priority={true}
       height={1000}
