@@ -14,9 +14,6 @@ interface Props {
 export const Card = ({ selected, picture, close }: Props) => {
   return (
     <div>
-      <p className="p-1 text-white bg-[#f54bff] w-fit px-4 text-sm rounded-xl mb-2 font-bold">
-        {picture.country}
-      </p>
       <Picture description={picture.description} path={picture.path} />
       <p className="text-gray-500 my-3">
         {picture.description ? picture.description : "No description."}
@@ -36,6 +33,7 @@ export const Card = ({ selected, picture, close }: Props) => {
           control={
             <FiMoreHorizontal
               className="text-lg text-gray-500 duration-300 hover:text-black cursor-pointer"
+              title="Open sidebar"
               onChange={close}
               onClick={() => {
                 selected(picture);

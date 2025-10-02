@@ -19,10 +19,5 @@ export const stats = (
       key: "Size",
       value: picture?.size,
     },
-    {
-      id: 4,
-      key: "Country",
-      value: picture?.country,
-    },
   ];
 };

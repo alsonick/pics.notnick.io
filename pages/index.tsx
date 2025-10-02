@@ -3,9 +3,10 @@ import { Sidebar } from "../components/Sidebar";
 import { Footer } from "../components/Footer";
 import { Layout } from "../components/Layout";
 import { Picture } from "../types/picture";
-import Slide from "@mui/material/Slide";
 import Script from "next/script";
 import { useState } from "react";
+
+// Next.js
 import { NextPage } from "next";
 import Head from "next/head";
 
@@ -31,8 +32,8 @@ const Home: NextPage = () => {
     });
   }
 
-  const title = "Pics • Nicholas Njoki";
   const description = "A collection of pictures I've taken.";
+  const title = "Pics • Nicholas Njoki";
 
   return (
     <Layout>
@@ -62,7 +63,6 @@ const Home: NextPage = () => {
       <h1 className="font-bold text-5xl tracking-tight">Pics</h1>
       <p className="mt-2 text-gray-500">{description}</p>
       <PictureList selected={selected} close={close} />
-
       <Footer />
     </Layout>
   );
