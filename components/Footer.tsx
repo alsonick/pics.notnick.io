@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="text-gray-500 flex w-full text-xs justify-between">
+    <footer className="text-gray-500 flex w-full text-xs">
       <div>
         <p>&copy; {new Date().getFullYear()} | All rights reserved.</p>
         <p>
@@ -45,17 +45,6 @@ export const Footer = () => {
           .
         </p>
       </div>
-      <a
-        aria-label="Follow @alsonick on GitHub"
-        href="https://github.com/alsonick"
-        className="github-button"
-        title="Follow @alsonick"
-        data-size="large"
-        rel="noreferrer"
-        target="_blank"
-      >
-        Follow @alsonick
-      </a>
     </footer>
   );
 };
