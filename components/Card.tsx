@@ -27,20 +27,22 @@ export const Card = ({ selected, picture, close }: Props) => {
         >
           Download
         </Button>
-        <FormControlLabel
-          checked={false}
-          label=""
-          control={
-            <FiMoreHorizontal
-              className="text-lg text-gray-500 duration-300 hover:text-black cursor-pointer"
-              title="Open sidebar"
-              onChange={close}
-              onClick={() => {
-                selected(picture);
-              }}
-            />
-          }
-        />
+        <div className="xl:flex hidden">
+          <FormControlLabel
+            checked={false}
+            label=""
+            control={
+              <FiMoreHorizontal
+                className="text-lg text-gray-500 duration-300 hover:text-black cursor-pointer"
+                title="Open sidebar"
+                onChange={close}
+                onClick={() => {
+                  selected(picture);
+                }}
+              />
+            }
+          />
+        </div>
       </div>
     </div>
   );

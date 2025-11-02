@@ -13,6 +13,7 @@ export const Picture = ({ description, path }: Props) => {
       priority={true}
       height={1000}
       width={450}
+      title={`${description} Picture`}
       src={path}
     />
   );
