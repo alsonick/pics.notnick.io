@@ -61,7 +61,7 @@ const Home: NextPage = () => {
       <Script async defer src="https://buttons.github.io/buttons.js" />
       <Sidebar picture={picture} opened={opened} close={close} />
       <h1 className="font-bold text-5xl mt-6 sm:mt-16 tracking-tight">
-        Pics <span className="ml-2">📷</span>
+        Pics
       </h1>
       <p className="mt-4 text-lg text-gray-500">{description}</p>
       <PictureList selected={selected} close={close} />
