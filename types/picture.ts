@@ -1,8 +1,7 @@
 export interface Picture {
-  id?: number;
-  country: string;
-  path: string;
   description: string;
   camera: string;
+  path: string;
   size: string;
+  id?: number;
 }
