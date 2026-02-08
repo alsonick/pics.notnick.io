@@ -34,7 +34,7 @@ export const Card = ({ selected, picture, close }: Props) => {
             control={
               <FiMoreHorizontal
                 className="text-lg text-gray-500 duration-300 hover:text-black cursor-pointer"
-                title="Open sidebar"
+                title="Open Sidebar"
                 onChange={close}
                 onClick={() => {
                   selected(picture);

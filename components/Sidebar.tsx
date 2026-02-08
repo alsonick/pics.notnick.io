@@ -28,12 +28,12 @@ export const Sidebar = ({ picture, close, opened }: Props) => {
 
   return (
     <>
-      {opened && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-10 transition-opacity duration-300"
-          onClick={() => close()}
-        />
-      )}
+      <div
+        className={`fixed inset-0 bg-black/50 z-10 transition-opacity duration-300 ${
+          opened ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => close()}
+      />
       <Slide direction="left" in={opened} mountOnEnter unmountOnExit>
         <div className="flex flex-col md:w-1/2 w-[95%] z-20 top-0 p-10 justify-center fixed h-full bg-white border-l shadow right-0">
           {picture ? (
