@@ -58,11 +58,4 @@ export const PICTURES: Picture[] = [
     camera: "iPhone 15",
     size: "6.7MB",
   },
-  {
-    id: generateRandomId(),
-    path: "/pics/picture09.jpeg",
-    description: "My Vercel Swag.",
-    camera: "iPhone 15",
-    size: "662KB",
-  },
 ];
