@@ -40,7 +40,7 @@ const Home: NextPage = () => {
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} key="desc" />
-        <meta name="theme-color" content="#b921ff" />
+        <meta name="theme-color" content="#30D158" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <meta name="twitter:title" content={title} />
