@@ -58,4 +58,25 @@ export const PICTURES: Picture[] = [
     camera: "iPhone 15",
     size: "6.7MB",
   },
+  {
+    id: generateRandomId(),
+    path: "/pics/picture09.jpg",
+    description: "A Bunny.",
+    camera: "iPhone 15",
+    size: "1.1MB",
+  },
+  {
+    id: generateRandomId(),
+    path: "/pics/picture10.jpg",
+    description: "London Eye. Moon & Venus In The Sky.",
+    camera: "iPhone 15",
+    size: "948KB",
+  },
+  {
+    id: generateRandomId(),
+    path: "/pics/picture11.jpg",
+    description: "My Gaming Setup.",
+    camera: "iPhone 15",
+    size: "685KB",
+  },
 ];
