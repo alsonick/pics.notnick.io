@@ -72,11 +72,4 @@ export const PICTURES: Picture[] = [
     camera: "iPhone 15",
     size: "948KB",
   },
-  {
-    id: generateRandomId(),
-    path: "/pics/picture11.jpg",
-    description: "My Gaming Setup.",
-    camera: "iPhone 15",
-    size: "685KB",
-  },
 ];
