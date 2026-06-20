@@ -13,6 +13,7 @@ export const PICTURES: Picture[] = [
     id: generateRandomId(),
     path: "/pics/picture02.jpeg",
     description: "My Prisma & Next.js Stickers.",
+    title: "My Prisma & Next.js Stickers Picture.",
     camera: "iPhone XR",
     size: "5.24MB",
   },
@@ -62,6 +63,7 @@ export const PICTURES: Picture[] = [
     id: generateRandomId(),
     path: "/pics/picture09.jpg",
     description: "London Eye. Moon & Venus In The Sky.",
+    title: "London Eye. Moon & Venus In The Sky Picture.",
     camera: "iPhone 15",
     size: "948KB",
   },
@@ -85,5 +87,5 @@ export const PICTURES: Picture[] = [
     description: "London Eye.",
     camera: "iPhone 15",
     size: "1.37MB",
-  }
+  },
 ];

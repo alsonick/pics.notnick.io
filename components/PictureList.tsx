@@ -9,7 +9,7 @@ interface Props {
 
 export const PictureList = ({ selected, close }: Props) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 sm:gap-8 my-10">
+    <div className="my-12 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
       {PICTURES.map((picture) => (
         <Card
           key={picture.id}

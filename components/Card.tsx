@@ -1,9 +1,7 @@
-import FormControlLabel from "@mui/material/FormControlLabel";
-import { FiMoreHorizontal } from "react-icons/fi";
+import { FiDownload, FiMaximize2 } from "react-icons/fi";
 import { Picture as P } from "../types/picture";
 import { Picture } from "./Picture";
 import { saveAs } from "file-saver";
-import { Button } from "./Button";
 
 interface Props {
   selected: (picture: P) => void;
@@ -11,37 +9,71 @@ interface Props {
   picture: P;
 }
 
-export const Card = ({ selected, picture, close }: Props) => {
+export const Card = ({ selected, picture }: Props) => {
+  const download = () => {
+    const url = picture.path;
+    saveAs(url, url.slice(6));
+  };
+
   return (
-    <div>
-      <Picture description={picture.description} path={picture.path} />
-      <p className="text-gray-500 my-3">
-        {picture.description ? picture.description : "No description."}
-      </p>
-      <div className="flex items-center border-t pt-3 justify-between">
-        <Button
-          onClick={() => {
-            let url = picture.path;
-            saveAs(url, url.slice(6));
-          }}
+    <div className="group flex flex-col">
+      <div
+        className="relative aspect-[4/5] w-full cursor-pointer overflow-hidden
+        bg-zinc-100 ring-1 ring-zinc-200/70 transition duration-300
+        hover:ring-zinc-300 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:ring-zinc-700"
+        onClick={() => selected(picture)}
+      >
+        <Picture
+          description={picture.description}
+          path={picture.path}
+          title={picture.title}
+          fill
+          className="object-cover transition-transform duration-[600ms] ease-out group-hover:scale-105"
+        />
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-t
+          from-black/50 via-black/0 to-black/0 opacity-0 transition-opacity
+          duration-300 group-hover:opacity-100"
+        />
+        <div
+          className="absolute bottom-3 right-3 flex translate-y-2 items-center gap-1.5
+          opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100"
         >
-          Download
-        </Button>
-        <div className="xl:flex hidden">
-          <FormControlLabel
-            checked={false}
-            label=""
-            control={
-              <FiMoreHorizontal
-                className="text-lg text-gray-500 duration-300 hover:text-black cursor-pointer"
-                title="Open Sidebar"
-                onChange={close}
-                onClick={() => {
-                  selected(picture);
-                }}
-              />
-            }
-          />
+          <button
+            className="flex h-9 w-9 items-center justify-center rounded-full
+            bg-white/90 text-zinc-700 shadow-md backdrop-blur transition
+            hover:bg-white hover:text-black"
+            title="Download"
+            onClick={(e) => {
+              e.stopPropagation();
+              download();
+            }}
+          >
+            <FiDownload className="text-base" />
+          </button>
+          <button
+            className="flex h-9 w-9 items-center justify-center rounded-full
+            bg-white/90 text-zinc-700 shadow-md backdrop-blur transition
+            hover:bg-white hover:text-black"
+            title="View details"
+            onClick={(e) => {
+              e.stopPropagation();
+              selected(picture);
+            }}
+          >
+            <FiMaximize2 className="text-base" />
+          </button>
+        </div>
+      </div>
+
+      <div className="mt-4 flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <p className="truncate text-sm font-medium text-zinc-800 dark:text-zinc-100">
+            {picture.description ? picture.description : "Untitled"}
+          </p>
+          <p className="mt-0.5 text-xs text-zinc-400 dark:text-zinc-500">
+            {picture.camera} · {picture.size}
+          </p>
         </div>
       </div>
     </div>
