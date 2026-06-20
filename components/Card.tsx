@@ -15,13 +15,24 @@ export const Card = ({ selected, picture }: Props) => {
     saveAs(url, url.slice(6));
   };
 
+  // The detail sidebar is disabled on mobile (below the `sm` breakpoint).
+  const open = () => {
+    if (
+      typeof window !== "undefined" &&
+      window.matchMedia("(max-width: 639px)").matches
+    ) {
+      return;
+    }
+    selected(picture);
+  };
+
   return (
     <div className="group flex flex-col">
       <div
-        className="relative aspect-[4/5] w-full cursor-pointer overflow-hidden
-        bg-zinc-100 ring-1 ring-zinc-200/70 transition duration-300
+        className="relative aspect-[4/5] w-full cursor-default overflow-hidden
+        bg-zinc-100 ring-1 ring-zinc-200/70 transition duration-300 sm:cursor-pointer
         hover:ring-zinc-300 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:ring-zinc-700"
-        onClick={() => selected(picture)}
+        onClick={open}
       >
         <Picture
           description={picture.description}
@@ -58,7 +69,7 @@ export const Card = ({ selected, picture }: Props) => {
             title="View details"
             onClick={(e) => {
               e.stopPropagation();
-              selected(picture);
+              open();
             }}
           >
             <FiMaximize2 className="text-base" />

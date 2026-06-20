@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <footer className="text-gray-500 flex w-full text-xs">
       <div>
-        <h2 className="text-lg opacity-80 font-bold text-black">
+        <h2 className="text-lg opacity-80 font-bold text-black dark:text-white">
           Nicholas Njoki
         </h2>
         <p>&copy; {new Date().getFullYear()} | All rights reserved.</p>
