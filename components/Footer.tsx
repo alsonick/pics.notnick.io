@@ -7,7 +7,7 @@ export const Footer = () => {
         <h2 className="text-lg opacity-80 font-bold text-black dark:text-white">
           Nicholas Njoki
         </h2>
-        <p>&copy; {new Date().getFullYear()} | All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} | Nicholas Njoki | MIT.</p>
         <p>
           Made with{" "}
           <Link
