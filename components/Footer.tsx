@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="text-gray-500 flex w-full text-xs">
+    <footer className="text-gray-500 flex w-full opacity-50 text-xs">
       <div>
         <h2 className="text-lg opacity-80 font-bold text-black dark:text-white">
           Nicholas Njoki

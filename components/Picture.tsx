@@ -6,9 +6,17 @@ interface Props {
   title?: string;
   className?: string;
   fill?: boolean;
+  eager?: boolean;
 }
 
-export const Picture = ({ description, path, title, className, fill }: Props) => {
+export const Picture = ({
+  description,
+  path,
+  title,
+  className,
+  fill,
+  eager,
+}: Props) => {
   const alt = description || "Photo by Nicholas Njoki";
   const imageTitle =
     title ?? `${(description || "Photo").replace(".", "")} Picture`;
@@ -19,6 +27,7 @@ export const Picture = ({ description, path, title, className, fill }: Props) =>
         title={imageTitle}
         alt={alt}
         fill
+        loading={eager ? "eager" : undefined}
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         className={className}
         src={path}

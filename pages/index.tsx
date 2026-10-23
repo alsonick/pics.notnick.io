@@ -4,7 +4,6 @@ import { Sidebar } from "../components/Sidebar";
 import { Footer } from "../components/Footer";
 import { Layout } from "../components/Layout";
 import { Picture } from "../types/picture";
-import { PICTURES } from "../lib/pictures";
 import { FiArrowUp } from "react-icons/fi";
 import Script from "next/script";
 import { useState } from "react";
@@ -67,19 +66,8 @@ const Home: NextPage = () => {
         <ThemeToggle />
       </div>
       <header className="mt-20 sm:mt-28">
-        <div
-          className="inline-flex items-center gap-2 rounded-full border border-zinc-200
-          bg-white/70 px-3 py-1 text-sm text-zinc-600 shadow-xs backdrop-blur-sm
-          dark:border-zinc-800 dark:bg-zinc-900/60 dark:text-zinc-400"
-        >
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-          </span>
-          {PICTURES.length} photos
-        </div>
         <h1
-          className="mt-6 bg-linear-to-br from-zinc-900 to-zinc-500 bg-clip-text
+          className="bg-linear-to-br from-zinc-900 to-zinc-500 bg-clip-text
           text-5xl font-bold tracking-tighter text-transparent
           dark:from-white dark:to-zinc-500 sm:text-7xl"
         >
@@ -91,7 +79,7 @@ const Home: NextPage = () => {
       </header>
       <PictureList selected={selected} close={close} />
       <button
-        className="mb-8 inline-flex items-center gap-1.5 self-start text-sm
+        className="group mb-8 inline-flex items-center gap-1.5 self-start text-sm
         font-medium text-zinc-500 underline-offset-4 transition duration-300
         hover:text-zinc-900 hover:underline dark:text-zinc-400 dark:hover:text-zinc-100"
         onClick={() =>
@@ -99,7 +87,7 @@ const Home: NextPage = () => {
         }
         title="Back to top"
       >
-        <FiArrowUp className="text-base" />
+        <FiArrowUp className="text-base transition-transform duration-300 group-hover:-translate-y-0.5" />
         Back to top
       </button>
       <Footer />

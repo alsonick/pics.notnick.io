@@ -7,9 +7,10 @@ interface Props {
   selected: (picture: P) => void;
   close: () => void;
   picture: P;
+  eager?: boolean;
 }
 
-export const Card = ({ selected, picture }: Props) => {
+export const Card = ({ selected, picture, eager }: Props) => {
   const download = () => {
     const url = picture.path;
     saveAs(url, url.slice(6));
@@ -39,6 +40,7 @@ export const Card = ({ selected, picture }: Props) => {
           path={picture.path}
           title={picture.title}
           fill
+          eager={eager}
           className="object-cover transition-transform duration-600 ease-out group-hover:scale-105"
         />
         <div
