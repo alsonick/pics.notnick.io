@@ -29,7 +29,7 @@ export const Card = ({ selected, picture }: Props) => {
   return (
     <div className="group flex flex-col">
       <div
-        className="relative aspect-[4/5] w-full cursor-default overflow-hidden
+        className="relative aspect-4/5 w-full cursor-default overflow-hidden
         bg-zinc-100 ring-1 ring-zinc-200/70 transition duration-300 sm:cursor-pointer
         hover:ring-zinc-300 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:ring-zinc-700"
         onClick={open}
@@ -39,10 +39,10 @@ export const Card = ({ selected, picture }: Props) => {
           path={picture.path}
           title={picture.title}
           fill
-          className="object-cover transition-transform duration-[600ms] ease-out group-hover:scale-105"
+          className="object-cover transition-transform duration-600 ease-out group-hover:scale-105"
         />
         <div
-          className="pointer-events-none absolute inset-0 bg-gradient-to-t
+          className="pointer-events-none absolute inset-0 bg-linear-to-t
           from-black/50 via-black/0 to-black/0 opacity-0 transition-opacity
           duration-300 group-hover:opacity-100"
         />
@@ -52,7 +52,7 @@ export const Card = ({ selected, picture }: Props) => {
         >
           <button
             className="flex h-9 w-9 items-center justify-center rounded-full
-            bg-white/90 text-zinc-700 shadow-md backdrop-blur transition
+            bg-white/90 text-zinc-700 shadow-md backdrop-blur-sm transition
             hover:bg-white hover:text-black"
             title="Download"
             onClick={(e) => {
@@ -64,7 +64,7 @@ export const Card = ({ selected, picture }: Props) => {
           </button>
           <button
             className="flex h-9 w-9 items-center justify-center rounded-full
-            bg-white/90 text-zinc-700 shadow-md backdrop-blur transition
+            bg-white/90 text-zinc-700 shadow-md backdrop-blur-sm transition
             hover:bg-white hover:text-black"
             title="View details"
             onClick={(e) => {

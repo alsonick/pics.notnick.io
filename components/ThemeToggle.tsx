@@ -22,7 +22,7 @@ export const ThemeToggle = () => {
   return (
     <button
       className="flex h-10 w-10 items-center justify-center rounded-full border
-      border-zinc-200 bg-white/70 text-zinc-600 shadow-sm backdrop-blur
+      border-zinc-200 bg-white/70 text-zinc-600 shadow-xs backdrop-blur-sm
       transition duration-300 hover:text-zinc-900 dark:border-zinc-800
       dark:bg-zinc-900/60 dark:text-zinc-400 dark:hover:text-zinc-100"
       onClick={toggle}

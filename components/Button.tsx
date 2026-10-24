@@ -9,7 +9,7 @@ export const Button = ({ onClick, children, className, title }: Props) => {
   return (
     <button
       className={`inline-flex h-11 items-center justify-center gap-2 rounded-full
-      bg-zinc-900 px-5 text-sm font-medium text-white shadow-sm outline-none
+      bg-zinc-900 px-5 text-sm font-medium text-white shadow-xs outline-hidden
       transition duration-300 hover:bg-zinc-700 active:scale-[0.98]
       focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2
       focus-visible:ring-offset-white dark:bg-white dark:text-zinc-900

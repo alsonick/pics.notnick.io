@@ -29,7 +29,7 @@ export const Sidebar = ({ picture, close, opened }: Props) => {
   return (
     <>
       <div
-        className={`fixed inset-0 z-10 bg-zinc-900/40 backdrop-blur-sm transition-opacity duration-300 ${
+        className={`fixed inset-0 z-10 bg-zinc-900/40 backdrop-blur-xs transition-opacity duration-300 ${
           opened
             ? "pointer-events-auto opacity-100"
             : "pointer-events-none opacity-0"
