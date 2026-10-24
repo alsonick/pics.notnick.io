@@ -69,7 +69,7 @@ const Home: NextPage = () => {
       <header className="mt-20 sm:mt-28">
         <div
           className="inline-flex items-center gap-2 rounded-full border border-zinc-200
-          bg-white/70 px-3 py-1 text-sm text-zinc-600 shadow-sm backdrop-blur
+          bg-white/70 px-3 py-1 text-sm text-zinc-600 shadow-xs backdrop-blur-sm
           dark:border-zinc-800 dark:bg-zinc-900/60 dark:text-zinc-400"
         >
           <span className="relative flex h-2 w-2">
@@ -79,7 +79,7 @@ const Home: NextPage = () => {
           {PICTURES.length} photos
         </div>
         <h1
-          className="mt-6 bg-gradient-to-br from-zinc-900 to-zinc-500 bg-clip-text
+          className="mt-6 bg-linear-to-br from-zinc-900 to-zinc-500 bg-clip-text
           text-5xl font-bold tracking-tighter text-transparent
           dark:from-white dark:to-zinc-500 sm:text-7xl"
         >
